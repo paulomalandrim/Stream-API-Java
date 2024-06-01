@@ -21,7 +21,7 @@ public class ConsumerExample {
     };
 
     // Usar o Consumer para imprimir números pares no Stream
-    numeros.stream_api().forEach(imprimirNumeroPar);
+    numeros.main.stream_api().forEach(imprimirNumeroPar);
   }
 }
 ```
@@ -108,7 +108,7 @@ public class FunctionExample {
     Function<Integer, Integer> dobrar = numero -> numero * 2;
 
     // Usar a função para dobrar todos os números no Stream e armazená-los em outra lista
-    List<Integer> numerosDobrados = numeros.stream_api()
+    List<Integer> numerosDobrados = numeros.main.stream_api()
         .map(dobrar)
         .collect(Collectors.toList());
 
@@ -159,7 +159,7 @@ public class PredicateExample {
     Predicate<Integer> isPar = numero -> numero % 2 == 0;
 
     // Usar o predicado para filtrar números pares no Stream e armazená-los em outra lista
-    List<Integer> numerosPares = numeros.stream_api()
+    List<Integer> numerosPares = numeros.main.stream_api()
         .filter(isPar)
         .collect(Collectors.toList());
 
@@ -212,7 +212,7 @@ public class BinaryOperatorExample {
     BinaryOperator<Integer> somar = (num1, num2) -> num1 + num2;
 
     // Usar o BinaryOperator para somar todos os números no Stream
-    int resultado = numeros.stream_api()
+    int resultado = numeros.main.stream_api()
         .reduce(0, somar);
 
     // Imprimir o resultado da soma
@@ -236,7 +236,7 @@ public class BinaryOperatorExample {
     };
 
     // Usar o BinaryOperator para somar todos os números no Stream
-    int resultado = numeros.stream_api()
+    int resultado = numeros.main.stream_api()
         .reduce(0, somar);
 
     // Imprimir o resultado da soma
